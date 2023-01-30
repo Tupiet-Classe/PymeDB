@@ -1,1 +1,2 @@
-Aquí apareixeran els models
+# Models
+Aquí podrem trobar els models. Estan ordenats correctament.
