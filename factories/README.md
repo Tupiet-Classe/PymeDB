@@ -1,1 +1,2 @@
-Aquí aniran les factories
+# Factories
+Aquí podem trobar les factories. Estan ordenades correctament.
