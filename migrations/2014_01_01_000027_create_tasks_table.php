@@ -21,12 +21,11 @@ return new class extends Migration
             $table->datetime('final_date')->nullable();
             $table->float('price')->nullable();
             $table->string('manages')->nullable();
-            $table->BigInteger('user_id')->nullable();
-            $table->BigInteger('questionary_id')->nullable();
-            $table->BigInteger('answer_id')->nullable();
-            $table->unsignedBigInteger('budget_id')->nullable();
-            $table->foreign('budget_id')->references('id')->on('budgets'); //relacion hecha
-            $table->BigInteger('impact_id')->nullable();
+            $table->foreignId('user_id')->constrained();
+            $table->foreignId('questionary_id')->constrained();
+            $table->foreignId('answer_id')->constrained();
+            $table->foreignId('budget_id')->constrained();
+            $table->foreignId('impact_id')->constrained();
             $table->BigInteger('percentage')->nullable();
             $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
