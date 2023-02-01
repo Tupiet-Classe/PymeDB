@@ -31,4 +31,24 @@ class Task extends Model
         'percentage',
         'hidden'
     ];
+
+    public function users(){
+        return $this->belongsTo(User::class);
+    }
+
+    public function questionnaires(){
+        return $this->belongsTo(Questionnaire::class);
+    }
+
+    public function answers(){
+        return $this->belongsTo(Answer::class);
+    }
+
+    public function budgets(){
+        return $this->belongsTo(Budget::class);
+    }
+
+    public function impacts(){
+        return $this->belongsTo(Impact::class);
+    }
 }
