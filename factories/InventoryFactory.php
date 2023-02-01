@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\Device;
+use App\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -19,7 +20,7 @@ class InventoryFactory extends Factory
     {
         return [
             'user_id' => function () {
-                return 1;
+                return User::inRandomOrder()->first()->id;;
             },
             'device_id' => function () {
                 return Device::inRandomOrder()->first()->id;
