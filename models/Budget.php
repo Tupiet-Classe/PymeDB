@@ -16,4 +16,8 @@ class Budget extends Model
         'hidden',
         'status',
     ];
+
+    public function tasks(){
+        return $this->hasMany(Task::class);
+    }
 }
