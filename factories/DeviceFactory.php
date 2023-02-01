@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\TypeDevice;
+use App\Models\User;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
@@ -28,6 +29,9 @@ class DeviceFactory extends Factory
             'serial_number' => $this->faker->uuid,
             'type_device_id' => function () {
                 return TypeDevice::inRandomOrder()->first()->id;
+            },
+            'user_id' => function () {
+                return User::inRandomOrder()->first()->id;
             },
         ];
     }

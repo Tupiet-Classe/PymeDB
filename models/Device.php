@@ -13,8 +13,8 @@ class Device extends Model
         return $this->belongsTo(TypeDevice::class);
     }
 
-    public function inventory() {
-        return $this->hasOne(Inventory::class);
+    public function user() {
+        return $this->belongsTo(User::class);
     }
 
     protected $fillable = [
@@ -27,6 +27,7 @@ class Device extends Model
         'tag',
         'serial_number',
         'type_device_id',
+        'user_id',
         'hidden'
     ];
 }
