@@ -31,7 +31,7 @@ class DatabaseSeeder extends Seeder
        // $this->call(EmblemSeeder::class);
       //  $this->call(CategorySeeder::class);
       //  $this->call(ResourceFileSeeder::class);
-       // $this->call(ResourceUrlSeeder::class);
+       // $this->call(ResourceURLSeeder::class);
       //  $this->call(ResourceTextSeeder::class);
       //  $this->call(ActivitySeeder::class);
       //  $this->call(DeliverySeeder::class);
