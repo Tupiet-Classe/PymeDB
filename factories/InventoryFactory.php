@@ -8,7 +8,7 @@ use App\Models\Device;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class InventorySeederFactory extends Factory
+class InventoryFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -19,7 +19,7 @@ class InventorySeederFactory extends Factory
     {
         return [
             'user_id' => function () {
-                return User::inRandomOrder()->first()->id;
+                return 1;
             },
             'device_id' => function () {
                 return Device::inRandomOrder()->first()->id;

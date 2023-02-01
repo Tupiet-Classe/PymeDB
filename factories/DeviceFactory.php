@@ -8,7 +8,7 @@ use App\Models\TypeDevice;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Model>
  */
-class DeviceSeederFactory extends Factory
+class DeviceFactory extends Factory
 {
     /**
      * Define the model's default state.
