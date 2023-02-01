@@ -20,7 +20,7 @@ return new class extends Migration
             $table->datetime('start_date')->nullable();
             $table->datetime('final_date')->nullable();
             $table->float('price')->nullable();
-            $table->string('manages')->nullable();
+            $table->enum('manages', ['Pymeralia', 'Personalmente'])->nullable();
             $table->foreignId('user_id')->constrained();
             $table->foreignId('questionnaires_id')->constrained();
             $table->foreignId('answer_id')->constrained();
