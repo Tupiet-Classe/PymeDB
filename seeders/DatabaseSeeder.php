@@ -27,7 +27,6 @@ class DatabaseSeeder extends Seeder
         $this->call(CourseSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(DeviceSeeder::class);
-        $this->call(InventorySeeder::class);
         $this->call(EmblemSeeder::class);
         $this->call(CategorySeeder::class);
         $this->call(ResourceFileSeeder::class);
