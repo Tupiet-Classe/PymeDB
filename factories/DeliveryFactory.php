@@ -21,7 +21,7 @@ class DeliveryFactory extends Factory
         $user_id = User::all()->pluck('id')->toArray();
         return [
             'locate'=>$this->faker->city(), 
-            'grade'=>$this->faker->number(),
+            'grade'=>$this->faker->randomFloat($nbMaxDecimals = 2, $min = 0, $max = 5),
             'activity_id'=>$this->faker->randomElement($activity_id), 
             'user_id'=>$this->faker->randomElement($user_id), 
             
