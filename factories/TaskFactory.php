@@ -26,7 +26,7 @@ class TaskFactory extends Factory
             'user_id' => function () {
                 return fake()->unique()->randomNumber();
             },
-            'questionnaires_id' => function () {
+            'questionnaire_id' => function () {
                 return fake()->unique()->randomNumber();
             },
             'answer_id' => function () {
