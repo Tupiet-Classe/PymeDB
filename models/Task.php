@@ -24,7 +24,7 @@ class Task extends Model
         'price',
         'manages',
         'user_id',
-        'questionnaires_id',
+        'questionnaire_id',
         'answer_id',
         'budget_id',
         'impact_id',
