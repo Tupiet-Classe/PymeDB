@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('budgets', function (Blueprint $table) {
             $table->id();
-            $table->float('price')->nullable()->default(null);
+            $table->float('price', 8, 2)->nullable()->default(null);
             $table->enum('accepted', ['Si', 'No'])->nullable()->default(null);
             $table->date('hidden')->nullable()->default(null);
             $table->enum('status', ['Pending','Done','Waiting'])->nullable()->default(null);
