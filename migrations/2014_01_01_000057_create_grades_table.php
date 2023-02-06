@@ -18,7 +18,7 @@ return new class extends Migration
             $table->integer('qualification')->notNull();
             $table->foreignId('user_id')->references('id')->on('users');
             $table->string('description', 50)->notNull();
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
