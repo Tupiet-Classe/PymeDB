@@ -19,7 +19,6 @@ class ReportFactory extends Factory
         return [
             'name' => $this->faker->unique()->name(),
             'date' => $this->faker->date(),
-            'hidden' => $this->faker->date()
         ];
     }
 }
