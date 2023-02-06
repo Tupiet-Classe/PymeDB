@@ -20,7 +20,6 @@ class QuestionnaireFactory extends Factory
             'name' => $this->faker->unique()->name(),
             'autor'=> $this->faker->unique()->name(),
             'date'=> $this->faker->date(),
-            'hidden'=> $this->faker->date(),
         ];
     }
 }
