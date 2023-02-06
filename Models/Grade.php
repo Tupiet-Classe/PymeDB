@@ -18,4 +18,9 @@ class Grade extends Model
         'description',
         'hidden',
     ];
+    
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
