@@ -16,4 +16,6 @@ Per posar en marxa aquest script, només cal executar la següent comanda:
 bash migrations.sh
 ```
 
+**SI ESTÀS EN WINDOWS:** Potser hauràs de posar **sail** davant.
+
 I llest! L'script ja hauria d'haver creat tots els fitxers necessaris.
