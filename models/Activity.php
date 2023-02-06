@@ -21,4 +21,13 @@ class Activity extends Model
     'hidden'
     ];
 
+    public function categories(){
+        return $this->belongsTo(Category::class);
+    }
+
+    public function deliveries()
+    {
+        return $this->hasMany(Delivery::class);
+    }
+
 }

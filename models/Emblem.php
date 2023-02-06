@@ -19,4 +19,9 @@ class Emblem extends Model
     'course_id',
     'hidden'
     ];
+
+    public function courses()
+    {
+        return $this->belongsTo(Course::class);
+    }
 }
