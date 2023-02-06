@@ -19,7 +19,6 @@ class BudgetFactory extends Factory
         return [
             'price' => fake()->randomFloat(2, 0, 100),
             'accepted' => fake()->randomElement(['Si', 'No']),
-            'hidden' => fake()->dateTimeBetween('-1 year', 'now'),
             'status' => fake()->randomElement(['Pending', 'Done', 'Waiting']),
             'created_at' => fake()->dateTimeBetween('-1 year', 'now'),
             'updated_at' => fake()->dateTimeBetween('-1 year', 'now'),
