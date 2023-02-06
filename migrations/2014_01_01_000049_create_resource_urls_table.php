@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('resource_files', function (Blueprint $table) {
+        Schema::create('resource_urls', function (Blueprint $table) {
             $table->id();
             $table->string('name', 255)->nullable(false);
             $table->string('location', 255)->nullable(false);
