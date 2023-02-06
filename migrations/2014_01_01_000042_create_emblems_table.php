@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('description', 50);
             $table->longText('image');
             $table->foreignId('course_id')->references('id')->on('courses');
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
