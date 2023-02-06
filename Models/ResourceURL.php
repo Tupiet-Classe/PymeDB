@@ -19,4 +19,9 @@ class ResourceURL extends Model
         'category_id',
         'hidden'
     ];
+    
+    public function categories()
+    {
+        return $this->belongsTo(Category::class);
+    }
 }
