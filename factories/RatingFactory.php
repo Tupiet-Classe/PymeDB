@@ -24,7 +24,6 @@ class RatingFactory extends Factory
             'rating'=>$this->faker->name(255),
             'feedback'=>$this->faker->name(255),
             'course_id'=>$this->faker->randomElement($course_id),
-            'hidden'=>$this->faker->date()
         ];
     }
 }
