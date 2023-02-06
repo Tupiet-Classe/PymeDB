@@ -25,7 +25,6 @@ class EmblemFactory extends Factory
             'description'=>$this->faker->name(),
             'image'=>$this->faker->text(),
             'course_id'=>$this->faker->randomElement($course_id),
-            'hidden'=>$this->faker->date()
         ];
     }
 }
