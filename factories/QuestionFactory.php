@@ -22,7 +22,6 @@ class QuestionFactory extends Factory
             'name' => $this->faker->unique()->name(),
             'description'=> $this->faker->unique()->name(),
             'questionnaire_id'=> $this->faker->randomElement($questionnaire_id),
-            'hidden'=> $this->faker->date(),
         ];
     }
 }
