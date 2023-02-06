@@ -17,7 +17,7 @@ return new class extends Migration
             $table->id();
             $table->string('name', 50);
             $table->foreignId('course_id')->references('id')->on('courses');
-            $table->date('hidden');
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
