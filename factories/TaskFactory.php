@@ -42,7 +42,6 @@ class TaskFactory extends Factory
             'budget_id' => $this->faker->randomElement($budget_id),
             'impact_id' => $this->faker->randomElement($impact_id),
             'percentage' => fake()->randomNumber(2),
-            'hidden' => fake()->dateTimeBetween('-1 year', 'now'),
             'created_at' => fake()->dateTimeBetween('-1 year', 'now'),
             'updated_at' => fake()->dateTimeBetween('-1 year', 'now'),
         ];
