@@ -22,7 +22,6 @@ class CategoryFactory extends Factory
         return [
             'name'=>$this->faker->name(),
             'course_id'=>$this->faker->randomElement($course_id),  
-            'hidden'=>$this->faker->date()
         ];
     }
 }
