@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 50)->nullable();
             $table->string('description', 50);
             $table->longText('image')->nullable();
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
