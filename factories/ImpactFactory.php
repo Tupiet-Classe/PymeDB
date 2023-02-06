@@ -19,10 +19,7 @@ class ImpactFactory extends Factory
         return [
             //$this per referir-nos al objecte
             //faker llibreria on hi ha molts tipus de dades
-            'name' => $this->faker->unique()->name(),   
-            // unique diu que no es poden repetir els noms
-            'hidden'=> $this->faker->date(),            
-            // date() o name() son el tipus de dades
+            'name' => $this->faker->unique()->name()
         ];
     }
 }
