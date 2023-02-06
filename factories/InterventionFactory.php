@@ -18,7 +18,6 @@ class InterventionFactory extends Factory
     {
         return [
             'name' => $this->faker->unique()->name(),
-            'hidden' => $this->faker->date(),
         ];
     }
 }
