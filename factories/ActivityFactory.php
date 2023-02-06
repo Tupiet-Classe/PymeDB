@@ -25,7 +25,6 @@ class ActivityFactory extends Factory
             'start_date'=>$this->faker->date(),
             'final_date'=>$this->faker->date(),
             'category_id'=>$this->faker->randomElement($category_id),
-            'hidden'=>$this->faker->date()
         ];
     }
 }
