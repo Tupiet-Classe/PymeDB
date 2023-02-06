@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('rating', 50)->notNull();
             $table->string('feedback', 255)->notNull();
             $table->foreignId('course_id')->references('id')->on('courses');
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
