@@ -12,6 +12,7 @@ class Report extends Model
     protected $table = 'reports';
     protected $fillable = [
         'name',
+        'user_id',
         'date',
         'hidden'
     ];
@@ -19,5 +20,9 @@ class Report extends Model
     public function results(): BelongsToMany
     {
         return $this->belongsToMany(\mysql_xdevapi\Result::class)->withTimestamps();
+    }
+
+    public function user(){
+        return $this->belongsTo(User::class);
     }
 }
