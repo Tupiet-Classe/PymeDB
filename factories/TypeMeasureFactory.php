@@ -18,7 +18,6 @@ class TypeMeasureFactory extends Factory
     {
         return [
             'name'=> $this->faker->name(),
-            'hidden'=> $this->faker->date(),
         ];
     }
 }
