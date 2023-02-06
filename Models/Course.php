@@ -19,4 +19,19 @@ class Course extends Model
     'image',
     'hidden'
     ];
+    
+    public function emblems()
+    {
+        return $this->hasMany(Emblem::class);
+    }
+
+    public function categories()
+    {
+        return $this->hasMany(Category::class);
+    }
+
+    public function ratings()
+    {
+        return $this->hasMany(Rating::class);
+    }
 }
