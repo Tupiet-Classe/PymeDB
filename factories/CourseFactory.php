@@ -20,7 +20,6 @@ class CourseFactory extends Factory
             'name'=>$this->faker->name(),
             'description'=>$this->faker->text(50),
             'image'=>$this->faker->text(10),
-            'hidden'=>$this->faker->date()         
         ];
     }
 }
