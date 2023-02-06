@@ -17,6 +17,10 @@ class Device extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function image() {
+        return $this->hasMany(ImageDevice::class);
+    }
+
     protected $fillable = [
         'brand',
         'model',
