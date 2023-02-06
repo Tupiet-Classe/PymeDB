@@ -23,8 +23,6 @@ class ResourceFileFactory extends Factory
             'name'=>$this->faker->name(255),
             'location'=>$this->faker->city(255),
             'category_id'=>$this->faker->randomElement($category_id),
-            'hidden'=>$this->faker->date(),
-
         ];
     }
 }
