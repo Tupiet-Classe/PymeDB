@@ -16,8 +16,9 @@ return new class extends Migration
         Schema::create('reports', function (Blueprint $table) {
             $table->id();
             $table->string('name', 50)->nullable(false);
+            $table->foreignId('user_id')->constrained();
             $table->date('date')->nullable(false);
-            $table->date('hidden');
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
