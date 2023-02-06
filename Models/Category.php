@@ -18,4 +18,29 @@ class Category extends Model
         'course_id',
         'hidden'
     ];
+    
+    public function courses()
+    {
+        return $this->belongsTo(Course::class);
+    }
+
+    public function resource_texts()
+    {
+        return $this->hasMany(ResourceText::class);
+    }
+
+    public function resource_files()
+    {
+        return $this->hasMany(ResourceFile::class);
+    }
+
+    public function resource_urls()
+    {
+        return $this->hasMany(ResourceUrl::class);
+    }
+
+    public function activities()
+    {
+        return $this->hasMany(Activity::class);
+    }
 }
