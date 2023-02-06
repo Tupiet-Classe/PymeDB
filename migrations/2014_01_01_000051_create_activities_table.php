@@ -20,7 +20,7 @@ return new class extends Migration
             $table->dateTime('start_date');
             $table->dateTime('final_date');
             $table->foreignId('category_id')->references('id')->on('categories');
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
