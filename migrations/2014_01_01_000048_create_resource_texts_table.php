@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 255)->nullable(false);
             $table->string('description', 255)->nullable(false);
             $table->foreignId('category_id')->references('id')->on('categories');
-            $table->date('hidden')->nullable();
+            $table->date('hidden')->nullable()->default(null);
             $table->timestamps();
         });
     }
