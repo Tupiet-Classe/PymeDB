@@ -17,3 +17,5 @@ mv $folder/seeders/* database/seeders
 mv $folder/Models/* app/Models 
 # Eliminem el directori pymedb, eliminant així tota la brossa
 rm -rf pymedb
+# Eliminem el zip
+rm pymedb.zip
