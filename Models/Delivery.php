@@ -18,4 +18,14 @@ class Delivery extends Model
     'activity_id',
     'user_id'
     ];
+    
+    public function activities()
+    {
+        return $this->belongsTo(Activity::class);
+    }
+
+    public function users()
+    {
+        return $this->belongsTo(User::class);
+    }
 }
