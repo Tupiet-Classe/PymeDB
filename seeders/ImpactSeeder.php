@@ -15,6 +15,6 @@ class ImpactSeeder extends Seeder
      */
     public function run()
     {
-        Impact::factory(12)->create();
+        Impact::factory(3)->create();
     }
 }

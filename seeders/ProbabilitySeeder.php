@@ -15,7 +15,7 @@ class ProbabilitySeeder extends Seeder
      */
     public function run()
     {
-        Probability::factory(12)->create();
+        Probability::factory(5)->create();
 
     }
 }

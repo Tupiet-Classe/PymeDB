@@ -15,6 +15,6 @@ class TypeMeasureSeeder extends Seeder
      */
     public function run()
     {
-        TypeMeasure::factory(12)->create();
+        TypeMeasure::factory(2)->create();
     }
 }
