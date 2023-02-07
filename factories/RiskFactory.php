@@ -14,11 +14,14 @@ class RiskFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
+    public static $counter = 0;
+
     public function definition()
     {
+        $array = ['Muy Alto','Alto','Medio','Bajo','Muy Bajo'];
         return [
-            'name' => $this->faker->unique()->name(),
-            'hidden' => $this->faker->date()
+            'name' => $array[self::$counter++ % count($array)],
         ];
     }
 }

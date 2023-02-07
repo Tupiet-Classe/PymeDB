@@ -14,15 +14,14 @@ class ImpactFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    public static $counter = 0;
+
     public function definition()
     {
+        $array = ['Alto','Medio','Bajo'];
         return [
-            //$this per referir-nos al objecte
-            //faker llibreria on hi ha molts tipus de dades
-            'name' => $this->faker->unique()->name(),   
-            // unique diu que no es poden repetir els noms
-            'hidden'=> $this->faker->date(),            
-            // date() o name() son el tipus de dades
+            'name' => $array[self::$counter++ % count($array)],
         ];
     }
+
 }

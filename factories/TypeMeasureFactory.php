@@ -14,11 +14,15 @@ class TypeMeasureFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    private $usedValues = [];
+
+    public static $counter = 0;
+
     public function definition()
     {
+        $array = ['Preventiva','Correctiva'];
         return [
-            'name'=> $this->faker->name(),
-            'hidden'=> $this->faker->date(),
+            'name' => $array[self::$counter++ % count($array)],
         ];
     }
 }

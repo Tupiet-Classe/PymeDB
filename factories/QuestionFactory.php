@@ -15,14 +15,20 @@ class QuestionFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    public static $counter = 0;
+
     public function definition()
     {
         $questionnaire_id = Questionnaire::all()->pluck('id')->toArray();
         return [
-            'name' => $this->faker->unique()->name(),
-            'description'=> $this->faker->unique()->name(),
+            'name' => str_pad(self::$counter++, 4, '0', STR_PAD_LEFT),
+            'description'=> $this->faker->unique()->text(30),
             'questionnaire_id'=> $this->faker->randomElement($questionnaire_id),
-            'hidden'=> $this->faker->date(),
         ];
+    }
+
+    public function initialize()
+    {
+        self::$counter = 0;
     }
 }

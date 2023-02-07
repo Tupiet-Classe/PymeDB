@@ -14,13 +14,19 @@ class QuestionnaireFactory extends Factory
      *
      * @return array<string, mixed>
      */
+    public static $counter = 0;
+
     public function definition()
     {
         return [
-            'name' => $this->faker->unique()->name(),
-            'autor'=> $this->faker->unique()->name(),
-            'date'=> $this->faker->date(),
-            'hidden'=> $this->faker->date(),
+            'name' => str_pad(self::$counter++, 4, '0', STR_PAD_LEFT),
+            'autor'=> $this->faker->randomElement(['PymeWorker','PymerManager']),
+            'date'=> $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
+    }
+
+    public function initialize()
+    {
+        self::$counter = 0;
     }
 }
