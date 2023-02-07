@@ -18,7 +18,7 @@ class ImageDeviceFactory extends Factory
     public function definition()
     {
         return [
-            'location' => $this->faker->imageUrl(640, 640, 'animals'),
+            'location' => $this->faker->imageUrl(640, 640, 'Device'),
             'device_id' => function () {
                 return Device::inRandomOrder()->first()->id;
             },
