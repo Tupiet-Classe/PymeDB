@@ -35,7 +35,6 @@ class DatabaseSeeder extends Seeder
         $this->call(ResourceTextSeeder::class);
         $this->call(ActivitySeeder::class);
         $this->call(DeliverySeeder::class);
-        $this->call(GradeSeeder::class);
         $this->call(RatingSeeder::class);
         $this->call(CourseUserSeeder::class);
         $this->call(QuestionnaireUserSeeder::class);
