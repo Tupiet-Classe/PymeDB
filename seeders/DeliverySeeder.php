@@ -16,7 +16,7 @@ class DeliverySeeder extends Seeder
     public function run()
     {
         
-        Delivery::factory(12)->create();
+        Delivery::factory(15)->create();
         //
     }
 }
