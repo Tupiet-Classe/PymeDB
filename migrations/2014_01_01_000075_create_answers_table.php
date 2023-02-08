@@ -23,7 +23,7 @@ return new class extends Migration
             $table->foreignId('probability_id')->references('id')->on('probabilities');
             $table->foreignId('impact_id')->references('id')->on('impacts');
             $table->foreignId('question_id')->references('id')->on('questions');
-            $table->date('hidden');
+            $table->date('hidden')->nullable();
             $table->timestamps();
         });
     }
