@@ -38,7 +38,7 @@ class DeliveryFactory extends Factory
 
         return [
             'locate' =>  $file_path,
-            'grade' => $this->faker->numberBetween(0, 1),
+            'grade' => $this->faker->numberBetween(0, 10),
             'feedback' => $this->faker->text(),
             'activity_id' => $this->faker->randomElement($activity_id),
             'user_id' => $this->faker->randomElement($user_id),
