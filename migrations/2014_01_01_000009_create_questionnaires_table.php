@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name', 50)->nullable(false);
             $table->string('autor', 50)->nullable(true);
             $table->date('date');
-            $table->date('hidden');
+            $table->date('hidden')->nullable();
             $table->timestamps();
         });
     }
