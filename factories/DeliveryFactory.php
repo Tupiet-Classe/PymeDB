@@ -24,7 +24,7 @@ class DeliveryFactory extends Factory
         $user_id = User::all()->pluck('id')->toArray();
 
         $file_name = Str::random(10) . ".txt";
-        $directory_path = storage_path("app/public/files");
+        $directory_path = "public/files";
         $file_path = $directory_path . "/{$file_name}";
 
         if (!is_dir($directory_path)) {
@@ -45,4 +45,3 @@ class DeliveryFactory extends Factory
         ];
     }
 }
-
