@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('name',50);
             $table->string('description',255);
             $table->foreignId('questionnaire_id')->references('id')->on('questionnaires');
-            $table->date('hidden');
+            $table->date('hidden')->nullable();
             $table->timestamps();
         });
     }
