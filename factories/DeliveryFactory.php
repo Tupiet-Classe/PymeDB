@@ -17,13 +17,20 @@ class DeliveryFactory extends Factory
      *
      * @return array<string, mixed>
      */
+
     public function definition()
     {
         $activity_id = Activity::all()->pluck('id')->toArray();
         $user_id = User::all()->pluck('id')->toArray();
 
         $file_name = Str::random(10) . ".txt";
-        $file_path = storage_path("app/public/files/{$file_name}");
+        $directory_path = storage_path("app/public/files");
+        $file_path = $directory_path . "/{$file_name}";
+
+        if (!is_dir($directory_path)) {
+            mkdir($directory_path, 0777, true);
+        }
+
         $file = fopen($file_path, "w");
         $random_string = $this->faker->paragraph;
         fwrite($file, $random_string);
@@ -35,7 +42,7 @@ class DeliveryFactory extends Factory
             'feedback' => $this->faker->text(),
             'activity_id' => $this->faker->randomElement($activity_id),
             'user_id' => $this->faker->randomElement($user_id),
-
         ];
     }
 }
+
