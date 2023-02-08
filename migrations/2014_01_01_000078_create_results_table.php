@@ -18,7 +18,7 @@ return new class extends Migration
             $table->date('hidden');
             $table->foreignId('answer_id')->references('id')->on('answers');
             $table->foreignId('report_id')->references('id')->on('reports');
-            $table->timestamps()->nullable();
+            $table->timestamps();
         });
     }
 
