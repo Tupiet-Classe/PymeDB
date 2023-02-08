@@ -10,11 +10,12 @@ class CourseUser extends Model
     use HasFactory;
 
     // Nom de la taula
-    protected $table = 'user_courses';
+    protected $table = 'course_user';
 
     // Camps de la taula a replenar (El id i el timespace no es fiquen)
     protected $fillable = [
-    'user_id',
-    'course_id',
+        'user_id',
+        'course_id',
     ];
 }
+
