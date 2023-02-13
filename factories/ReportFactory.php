@@ -2,6 +2,7 @@
 
 namespace Database\Factories;
 
+use App\Models\QuestionnaireUser;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use App\Models\User;
 
@@ -18,12 +19,12 @@ class ReportFactory extends Factory
     public function definition()
     {
 
-        $user_id = User::all()->pluck('id')->toArray();
+        $questionnaire_user_id = QuestionnaireUser::all()->pluck('id')->toArray();
 
 
         return [
             'name' => $this->faker->unique()->name(),
-            'user_id' => $this->faker->randomElement($user_id),
+            'questionnaire_user_id' => $this->faker->randomElement($questionnaire_user_id),
             'date' => $this->faker->date(),
         ];
     }
