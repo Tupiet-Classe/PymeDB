@@ -30,7 +30,7 @@ class TaskFactory extends Factory
         $impact_id = Impact::all()->pluck('id')->toArray();
 
         return [
-            'accepted' => fake()->randomElement(['Si', 'No']), //randomElement tan solo permite coger los dos elementos dentro del parentesis
+            'accepted' => fake()->randomElement(['true', 'false']), //randomElement tan solo permite coger los dos elementos dentro del parentesis
             'state' => fake()->randomElement(['ToDo', 'InProgress', 'Done']),
             'start_date' => fake()->dateTimeBetween('-1 year', 'now'),
             'final_date' => fake()->dateTimeBetween('-1 year', 'now'),
