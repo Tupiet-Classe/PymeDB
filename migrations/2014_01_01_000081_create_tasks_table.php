@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('tasks', function (Blueprint $table) {
             $table->id();
-            $table->enum('accepted', ['true', 'false'])->default(null);
             $table->enum('state',['ToDo','InProgress','Done'])->nullable()->default('ToDo');
             $table->datetime('start_date')->nullable();
             $table->datetime('final_date')->nullable();
