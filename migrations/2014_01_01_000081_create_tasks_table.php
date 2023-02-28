@@ -20,7 +20,7 @@ return new class extends Migration
             $table->datetime('start_date')->nullable();
             $table->datetime('final_date')->nullable();
             $table->float('price')->nullable();
-            $table->enum('manages', ['Pymeralia', 'Personalmente'])->nullable();
+            $table->enum('manages', ['Me aconseja Pymeralia', 'Me lo gestiono yo', 'No aceptada'])->nullable()->default('No aceptada');
             $table->foreignId('user_id')->constrained();
             $table->foreignId('questionnaire_id')->constrained();
             $table->foreignId('answer_id')->constrained();
