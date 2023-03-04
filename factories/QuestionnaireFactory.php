@@ -22,6 +22,7 @@ class QuestionnaireFactory extends Factory
             'name' => str_pad(self::$counter++, 4, '0', STR_PAD_LEFT),
             'autor'=> $this->faker->randomElement(['PymeWorker','PymerManager']),
             'date'=> $this->faker->dateTimeBetween('-1 year', 'now'),
+            'hidden' => $this->faker->optional()->dateTimeThisYear()
         ];
     }
 
