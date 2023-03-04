@@ -19,11 +19,9 @@ class QuestionFactory extends Factory
 
     public function definition()
     {
-        $questionnaire_id = Questionnaire::all()->pluck('id')->toArray();
         return [
             'name' => str_pad(self::$counter++, 4, '0', STR_PAD_LEFT),
             'description'=> $this->faker->unique()->text(30),
-            'questionnaire_id'=> $this->faker->randomElement($questionnaire_id),
         ];
     }
 
