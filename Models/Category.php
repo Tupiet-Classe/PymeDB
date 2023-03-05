@@ -36,7 +36,7 @@ class Category extends Model
 
     public function resource_urls()
     {
-        return $this->hasMany(ResourceUrl::class);
+        return $this->hasMany(ResourceURL::class);
     }
 
     public function activities()
