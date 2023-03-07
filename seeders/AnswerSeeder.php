@@ -15,6 +15,8 @@ class AnswerSeeder extends Seeder
      */
     public function run()
     {
-        Answer::factory(300)->create();
+        // creación de respuestas "Sí"
+        Answer::factory()->create();
     }
+
 }
