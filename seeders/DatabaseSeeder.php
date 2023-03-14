@@ -24,6 +24,7 @@ class DatabaseSeeder extends Seeder
         $this->call(RiskSeeder::class);
         $this->call(ImpactSeeder::class);
         $this->call(CourseSeeder::class);
+        $this->call(RoleSeeder::class);
         $this->call(UserSeeder::class);
         $this->call(DeviceSeeder::class);
         $this->call(ImageDeviceSeeder::class);
