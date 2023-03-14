@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('mac_ethernet')->nullable();
             $table->string('mac_wifi')->nullable();
             $table->text('description')->nullable();
-            $table->string('state')->nullable();
+            $table->enum('state', ['Operativo', 'En mantenimiento', 'Deshabilitado'])->nullable();
             $table->string('tag')->nullable();
             $table->string('serial_number');
             $table->foreignId('type_device_id')->constrained();
