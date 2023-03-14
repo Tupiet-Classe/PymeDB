@@ -2,11 +2,12 @@
 
 namespace Database\Seeders;
 
-use App\Models\Questionnaire;
+use App\Models\Answer;
+use App\Models\Question;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
-class QuestionnaireSeeder extends Seeder
+class QuestionSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,6 +16,16 @@ class QuestionnaireSeeder extends Seeder
      */
     public function run()
     {
-        Questionnaire::factory(12)->create();
+        Question::factory(12)->create()->each(function ($question) {
+            Answer::factory()->create([
+                'question_id' => $question->id,
+                'name' => 'Sí',
+            ]);
+
+            Answer::factory()->create([
+                'question_id' => $question->id,
+                'name' => 'No',
+            ]);
+        });
     }
 }
