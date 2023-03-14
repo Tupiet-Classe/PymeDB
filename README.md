@@ -2,8 +2,8 @@
 Repositori compartit amb les dades unificades per treballar a Pymeralia
 
 # Instalar Laravel-permission i LaravelPermissionToVue
-https://spatie.be/docs/laravel-permission/v5/installation-laravel
-https://www.npmjs.com/package/laravel-permission-to-vuejs
+* https://spatie.be/docs/laravel-permission/v5/installation-laravel
+* https://www.npmjs.com/package/laravel-permission-to-vuejs
 
 ## Script
 Aquest repositori inclou un script, que permet gestionar tot el tema de les migracions d'una manera més àgil. Amb només executar l'script, es descarregarà tot el contingut d'aquest repositori del GitHub als directoris corresponents. 
