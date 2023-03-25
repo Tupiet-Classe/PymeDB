@@ -30,9 +30,9 @@ class DeviceFactory extends Factory
             'type_device_id' => function () {
                 return TypeDevice::inRandomOrder()->first()->id;
             },
-            'user_id' => function () {
-                return User::inRandomOrder()->first()->id;
-            },
+            //'user_id' => function () {
+            //    return User::inRandomOrder()->first()->id;
+            //},
         ];
     }
 }
