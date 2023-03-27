@@ -27,6 +27,7 @@ class Device extends Model
         'tag',
         'serial_number',
         'type_device_id',
+        'user_id',
         'hidden'
     ];
 }
