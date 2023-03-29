@@ -24,7 +24,7 @@ class DeviceFactory extends Factory
             'mac_ethernet' => $this->faker->macAddress,
             'mac_wifi' => $this->faker->macAddress,
             'description' => $this->faker->sentence,
-            'state' => $this->faker->randomElement(['Operativo', 'En mantenimiento', 'Deshabilitado'),
+            'state' => $this->faker->randomElement(['Operativo', 'En mantenimiento', 'Deshabilitado']),
             'tag' => $this->faker->word,
             'serial_number' => $this->faker->uuid,
             'type_device_id' => function () {
