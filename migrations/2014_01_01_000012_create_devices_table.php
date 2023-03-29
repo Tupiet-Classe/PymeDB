@@ -24,7 +24,7 @@ return new class extends Migration
             $table->string('tag')->nullable();
             $table->string('serial_number');
             $table->foreignId('type_device_id')->constrained();
-            $table->foreignId('user_id')->nullable();
+            $table->foreignId('company_id')->constrained();
             $table->date('hidden')->nullable();
             $table->timestamps();
         });
